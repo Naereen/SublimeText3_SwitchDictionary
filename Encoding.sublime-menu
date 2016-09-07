@@ -1,0 +1,19 @@
+// Sublime Text 3 : add two items to the Encoding menu
+// (C) Lilian Besson, 2016.
+// See http://perso.crans.org/besson/publis/ST3/ for more ST3 build systems!
+// and http://docs.sublimetext.info/en/latest/customization/menus.html for the doc on ST3 menu.
+[
+    { "caption": "-" },
+    {
+        "command": "enable_english_spellcheck",
+        "caption": "SwitchDictionary – English"
+    },
+    {
+        "command": "enable_french_spellcheck",
+        "caption": "SwitchDictionary – French"
+    },
+    {
+        "command": "switch_spellcheck",
+        "caption": "SwitchDictionary – None ↔ French ↔ English"
+    },
+]

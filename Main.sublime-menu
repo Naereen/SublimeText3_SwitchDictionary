@@ -1,0 +1,49 @@
+// Sublime Text 3 : add two items to the Main Preferences menu
+// (C) Lilian Besson, 2016.
+// See http://perso.crans.org/besson/publis/ST3/ for more ST3 build systems!
+// and http://docs.sublimetext.info/en/latest/customization/menus.html for the doc on ST3 menu.
+[
+    {
+        "caption": "Preferences",
+        "mnemonic": "n",
+        "id": "preferences",
+        "children":
+        [
+            {
+                "caption": "Package Settings",
+                "mnemonic": "P",
+                "id": "package-settings",
+                "children":
+                [
+                    {
+                        "caption": "SwitchDictionary",
+                        "children":
+                        [
+                            // {
+                            //     "command": "open_file",
+                            //     "args": {"file": "${packages}/SwitchDictionary/Default.sublime-settings"},
+                            //     "caption": "SwitchDictionary Settings – Default"
+                            // },
+                            // {
+                            //     "command": "open_file",
+                            //     "args": {"file": "${packages}/User/SwitchDictionary.sublime-settings"},
+                            //     "caption": "SwitchDictionary Settings – User"
+                            // },
+                            // { "caption": "-" },
+                            {
+                                "command": "open_file",
+                                "args": {"file": "${packages}/SwitchDictionary/Default.sublime-keymap"},
+                                "caption": "Key Bindings – Default"
+                            },
+                            {
+                                "command": "open_file",
+                                "args": {"file": "${packages}/User/SwitchDictionary.sublime-keymap"},
+                                "caption": "Key Bindings – User"
+                            },
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
