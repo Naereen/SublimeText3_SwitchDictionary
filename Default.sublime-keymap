@@ -1,0 +1,23 @@
+// Sublime Text 3 : add shortcut to two commands
+// (C) Lilian Besson, 2016.
+// See http://perso.crans.org/besson/publis/ST3/ for more ST3 build systems!
+// and http://docs.sublimetext.info/en/latest/extensibility/macros.html for the doc on ST3 build system.
+[
+    // To switch between French and English dictionary
+    {
+        "keys": ["ctrl+k", "ctrl+e"],
+        "command": "enable_english_spellcheck"
+    },
+    {
+        "keys": ["ctrl+k", "ctrl+f"],
+        "command": "enable_french_spellcheck"
+    },
+    {
+        "keys": ["ctrl+k", "ctrl+s"],
+        "command": "switch_spellcheck"
+    },
+    {
+        "keys": ["ctrl+alt+s"],
+        "command": "switch_spellcheck"
+    },
+]
