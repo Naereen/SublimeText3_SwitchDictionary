@@ -6,14 +6,14 @@
     { "caption": "-" },
     {
         "command": "enable_english_spellcheck",
-        "caption": "SwitchDictionary – English"
+        "caption": "Switch Dictionary – English"
     },
     {
         "command": "enable_french_spellcheck",
-        "caption": "SwitchDictionary – French"
+        "caption": "Switch Dictionary – French"
     },
     {
         "command": "switch_spellcheck",
-        "caption": "SwitchDictionary – None ↔ French ↔ English"
+        "caption": "Switch Dictionary – None ↔ French ↔ English"
     },
 ]
