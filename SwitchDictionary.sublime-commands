@@ -1,0 +1,18 @@
+// Sublime Text 3 : add two commands to the palette menu
+// (C) Lilian Besson, 2016.
+// See http://perso.crans.org/besson/publis/ST3/ for more ST3 build systems!
+// and http://docs.sublimetext.info/en/latest/extensibility/commands.html for the doc on ST3 commands.
+[
+    {
+        "caption": "Switch Dictionary: to English",
+        "command": "enable_english_spellcheck",
+    },
+    {
+        "caption": "Switch Dictionary: to French",
+        "command": "enable_french_spellcheck",
+    },
+    {
+        "caption": "Switch Dictionary: None ↔ French ↔ English",
+        "command": "switch_spellcheck",
+    },
+]
