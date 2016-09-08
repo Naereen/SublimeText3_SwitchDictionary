@@ -18,6 +18,16 @@
   - It cycles between English, French, and None
   - It is binded to the key chain ["ctrl+k", "ctrl+s"] and ["ctrl+alt+s"]
 
+TODO 'set_english_email'
+  - It enables shellcheck, and sets the dictionary to English
+  - It sets the syntax to "Markdown GFM"
+  - And ask to save the file
+
+TODO 'set_french_email'
+  - It enables shellcheck, and sets the dictionary to French
+  - It sets the syntax to "Markdown GFM"
+  - And ask to save the file
+
 
 About:
 
