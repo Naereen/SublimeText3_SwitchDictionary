@@ -12,15 +12,15 @@ It is a tiny [Sublime Text 3](https://www.sublimetext.com/3) plug-in, **not test
 ## Commands
 ### `enable_english_spellcheck`
   - It enables shell-check, and sets the dictionary to *English*
-  - [It is binded](Default.sublime-keymap) to the key chain <key>ctrl+k, ctrl+e</key>
+  - [It is binded](Default.sublime-keymap) to the key chain <keyboard>ctrl+k, ctrl+e</keyboard>
 
 ### `enable_french_spellcheck`
   - It enables shell-check, and sets the dictionary to *French*
-  - [It is binded](Default.sublime-keymap) to the key chain <key>ctrl+k, ctrl+f</key>
+  - [It is binded](Default.sublime-keymap) to the key chain <keyboard>ctrl+k, ctrl+f</keyboard>
 
 ### `switch_spellcheck`
   - It cycles between *English*, *French*, and *None*
-  - [It is binded](Default.sublime-keymap) to the key chain <key>ctrl+k, ctrl+s</key> and also to <key>ctrl+alt+s</key>
+  - [It is binded](Default.sublime-keymap) to the key chain <keyboard>ctrl+k, ctrl+s</keyboard> and also to <keyboard>ctrl+alt+s</keyboard>
 
 ### `disable_spellcheck`
   - It disables shellcheck
@@ -30,7 +30,7 @@ It is a tiny [Sublime Text 3](https://www.sublimetext.com/3) plug-in, **not test
 
 ## Accessing commands through...
 ### :notebook: The *Command Palette*
-Press <key>ctrl+shift+p</key> (Windows, Linux) or <key>cmd+shift+p</key> (OS X) to open the *Command Palette*, and then search for:
+Press <keyboard>ctrl+shift+p</keyboard> (Windows, Linux) or <keyboard>cmd+shift+p</keyboard> (OS X) to open the *Command Palette*, and then search for:
 
  - `Switch Dictionary: to English`,
  - `Switch Dictionary: to French`,
@@ -47,19 +47,19 @@ Click on the menu, and you can *click* on:
 ### :musical_keyboard: Shortcuts
 [By default](Default.sublime-keymap), the following shortcuts are available
 
- - <key>ctrl+k, ctrl+e</key> : `Switch Dictionary – to English`
- - <key>ctrl+k, ctrl+f</key> : `Switch Dictionary – to French`
- - <key>ctrl+k, ctrl+s</key>, <key>ctrl+alt+s</key> : `Switch Dictionary – None ↔ French ↔ English`
+ - <keyboard>ctrl+k, ctrl+e</keyboard> : `Switch Dictionary – to English`
+ - <keyboard>ctrl+k, ctrl+f</keyboard> : `Switch Dictionary – to French`
+ - <keyboard>ctrl+k, ctrl+s</keyboard>, <keyboard>ctrl+alt+s</keyboard> : `Switch Dictionary – None ↔ French ↔ English`
 
 ----
 
 ## :question: How to install it ?
 ### :ok_hand: With [Package Control](https://packagecontrol.io/)
-If you have [Package Control](https://packagecontrol.io/) installed in Sublime Text 2/3, just press <key>ctrl+shift+p</key> (Windows, Linux) or <key>cmd+shift+p</key> (OS X) to open the *Command Palette*.
+If you have [Package Control](https://packagecontrol.io/) installed in Sublime Text 2/3, just press <keyboard>ctrl+shift+p</keyboard> (Windows, Linux) or <keyboard>cmd+shift+p</keyboard> (OS X) to open the *Command Palette*.
 
 Start typing `install` to select `Package Control: Install Package`, then search for `SwitchDictionary` and select it. That's it!
 
-You can check it was well installed by hitting <key>ctrl+k, ctrl+s</key> (it should enable English spell checking)
+You can check it was well installed by hitting <keyboard>ctrl+k, ctrl+s</keyboard> (it should enable English spell checking)
 
 ### :floppy_disk: Manually, with [git](https://git-scm.com/)
 You can also install this package manually by entering the Packages directory of Sublime Text 2/3 and issuing on a terminal:
