@@ -56,21 +56,22 @@ Click on the menu, and you can *click* on:
 
 ----
 
-## :question: **Q.** How to install it ?
-### :ok_hand: **A.** With [Package Control](https://packagecontrol.io/)
+## :question: How to install it ?
+### :ok_hand: With [Package Control](https://packagecontrol.io/) : *NOT YET !*
 If you have [Package Control](https://packagecontrol.io/) installed in Sublime Text 2/3, just press <kbd>ctrl+shift+p</kbd> (Windows, Linux) or <kbd>cmd+shift+p</kbd> (OS X) to open the *Command Palette*.
 
 Start typing `install` to select `Package Control: Install Package`, then search for `SwitchDictionary` and select it. That's it!
 
-You can check it was well installed by hitting <kbd>ctrl+k, ctrl+s</kbd> (it should enable English spell checking)
-
-### :floppy_disk: **A.** Manually, with [git](https://git-scm.com/)
+### :floppy_disk: Manually, with [git](https://git-scm.com/)
 You can also install this package manually by entering the Packages directory of Sublime Text 2/3 and issuing on a terminal:
 
 ```bash
 cd ~/.config/sublime-text-3/Packages/  # adapt on Windows or Mac OS X
 git clone https://github.com/Naereen/SublimeText3_SwitchDictionary
 ```
+
+### Check it
+You can check it was well installed by hitting <kbd>ctrl+k, ctrl+s</kbd> (it should enable English spell checking)
 
 ----
 
@@ -79,7 +80,6 @@ git clone https://github.com/Naereen/SublimeText3_SwitchDictionary
 - [ ] Test it on another laptop
 - [ ] Test it on Mac OS X and/or Windows ??
 - [ ] Publish it on [Package Control](https://packagecontrol.io/) !
-- [ ] Find a nice way to install it locally? Or is it FIXED already?
 
 ## :hourglass: Future Features
 - Be more general: allow users to define manually a list of dictionary (path, and name), and add one command for each dictionary, and make the switch_spellcheck command cycle between them! XXX Use the [ST2 SwitchLanguage plugin](https://packagecontrol.io/packages/SwitchLanguage) ?
