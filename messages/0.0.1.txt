@@ -1,1 +1,3 @@
-TODO
+# SublimeText3 SwitchDictionary - ALPHA STAGE
+## WARNING
+This plug-in is still in active development!
