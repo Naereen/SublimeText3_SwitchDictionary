@@ -12,7 +12,7 @@ It is a tiny [Sublime Text 3](https://www.sublimetext.com/3) plug-in, **not test
 ## Commands
 ### `enable_english_spellcheck`
   - It enables shell-check, and sets the dictionary to *English*
-  - [It is binded](Default.sublime-keymap) to the key chain <kbd>ctrl+k, ctrl+e</kbd>
+  - [It is binded](Default.sublime-keymap) to the key chain [ctrl]+[k], [ctrl]+[e]
 
 ### `enable_french_spellcheck`
   - It enables shell-check, and sets the dictionary to *French*
