@@ -7,6 +7,8 @@ It is a tiny [Sublime Text 3](https://www.sublimetext.com/3) plug-in, **not test
 
 *Note:* it will soon be better, allowing you to define your own list of dictionaries.
 
+----
+
 ## Commands
 ### `enable_english_spellcheck`
   - It enables shell-check, and sets the dictionary to *English*
@@ -49,7 +51,6 @@ Click on the menu, and you can *click* on:
  - <key>ctrl+k, ctrl+f</key> : `Switch Dictionary – to French`
  - <key>ctrl+k, ctrl+s</key>, <key>ctrl+alt+s</key> : `Switch Dictionary – None ↔ French ↔ English`
 
-
 ----
 
 ## :question: How to install it ?
@@ -63,7 +64,10 @@ You can check it was well installed by hitting <key>ctrl+k, ctrl+s</key> (it sho
 ### :floppy_disk: Manually, with [git](https://git-scm.com/)
 You can also install this package manually by entering the Packages directory of Sublime Text 2/3 and issuing on a terminal:
 
-    git clone https://github.com/Naereen/SublimeText3_SwitchDictionary
+```bash
+cd ~/.config/sublime-text-3/Packages/  # adapt on Windows or Mac OS X
+git clone https://github.com/Naereen/SublimeText3_SwitchDictionary
+```
 
 ----
 
