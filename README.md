@@ -12,7 +12,7 @@ It is a tiny [Sublime Text 3](https://www.sublimetext.com/3) plug-in, **not test
 ## Commands
 ### `enable_english_spellcheck`
   - It enables shell-check, and sets the dictionary to *English*
-  - [It is binded](Default.sublime-keymap) to the key chain <kbd>ctrl</kbd>+<kbd>k</kbd>, <kbd>ctrl</kbd>+<kbd>e</kbd>
+  - [It is binded](Default.sublime-keymap) to the key chain <kbd>ctrl+k, ctrl+e</kbd>
 
 ### `enable_french_spellcheck`
   - It enables shell-check, and sets the dictionary to *French*
@@ -76,7 +76,7 @@ git clone https://github.com/Naereen/SublimeText3_SwitchDictionary
 - Find a nice way to install it locally? Or is it FIXED already?
 
 ## :hourglass: Future Features
-- Be more general: allow users to define manually a list of dictionary (path, and name), and add one command for each dictionary, and make the switch_spellcheck command cycle between them!
+- Be more general: allow users to define manually a list of dictionary (path, and name), and add one command for each dictionary, and make the switch_spellcheck command cycle between them! XXX Use the [ST2 SwitchLanguage plugin](https://packagecontrol.io/packages/SwitchLanguage) ?
 
 ----
 
