@@ -1,13 +1,13 @@
 # [SublimeText3 SwitchDictionary](https://github.com/Naereen/SublimeText3_SwitchDictionary/) - ALPHA STAGE
 ## WARNING
-[This plug-in](https://github.com/Naereen/SublimeText3_SwitchDictionary/) [is still in active development](https://github.com/Naereen/SublimeText3_SwitchDictionary/graphs/commit-activity)!
+[This plug-in](https://github.com/Naereen/SublimeText3_SwitchDictionary/) [is still in active development](https://github.com/Naereen/SublimeText3_SwitchDictionary/graphs/commit-activity) and in alpha stage!
 
 ## About
-It is a tiny [Sublime Text 3](https://www.sublimetext.com/3) plug-in, **not tested** on [ST 2](https://www.sublimetext.com/), that add commands and shortcuts to switch between: no spell-check, spell-check for *French*, and spell-check for *English*.
+It is a tiny [Sublime Text 3](https://www.sublimetext.com/3) plug-in (not tested on [ST 2](https://www.sublimetext.com/)), that add commands and shortcuts to switch between: no spell-check, spell-check for *French*, and spell-check for *English*.
 
 *Note:* I hope it will soon be better, allowing you to define your own list of dictionaries.
 
-## Demo
+## Demo (screencast)
 ![demo of Sublime Text 3 'SwitchDictionary' plugin (gif)](demo_SublimeText3_SwitchDictionary_plugin.gif)
 
 ----
@@ -75,13 +75,13 @@ You can check it was well installed by hitting <kbd>ctrl+k, ctrl+s</kbd> (it sho
 
 ----
 
-## :boom: TODO !
-- [ ] Finish it
-- [ ] Test it on another laptop
+## :boom: [TODO !](https://github.com/Naereen/SublimeText3_SwitchDictionary/projects/1)
+- [ ] Finish it...
+- [X] Test it on another laptop : DONE on another Linux laptop
 - [ ] Test it on Mac OS X and/or Windows ??
 - [ ] Publish it on [Package Control](https://packagecontrol.io/) !
 
-## :hourglass: Future Features
+## :hourglass: [Future Features](https://github.com/Naereen/SublimeText3_SwitchDictionary/projects/1)
 - Be more general: allow users to define manually a list of dictionary (path, and name), and add one command for each dictionary, and make the switch_spellcheck command cycle between them! XXX Use the [ST2 SwitchLanguage plugin](https://packagecontrol.io/packages/SwitchLanguage) ?
 
 ----
