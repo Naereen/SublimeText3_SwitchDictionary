@@ -1,14 +1,14 @@
 ...
-                {
-                       "name": "SwitchDictionary",
-                       "details": "https://github.com/Naereen/SublimeText3_SwitchDictionary",
-                       "releases": [
-                               {
-                                       "sublime_text": ">=3000",
-                                       "branch": "master"
-                               }
-                       ]
-               }
-               {
-                         "name": "SwitchLanguage",
+        {
+               "name": "SwitchDictionary",
+               "details": "https://github.com/Naereen/SublimeText3_SwitchDictionary",
+               "releases": [
+                       {
+                               "sublime_text": ">=3000",
+                               "tags": true
+                       }
+               ]
+       }
+       {
+                 "name": "SwitchLanguage",
 ...

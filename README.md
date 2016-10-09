@@ -8,7 +8,7 @@ It is a tiny [Sublime Text 3](https://www.sublimetext.com/3) plug-in (not tested
 *Note:* I hope it will soon be better, allowing you to define your own list of dictionaries.
 
 ## Demo (gif screencast)
-![demo of Sublime Text 3 'SwitchDictionary' plugin (gif)](demo_SublimeText3_SwitchDictionary_plugin.gif)
+![demo of Sublime Text 3 'SwitchDictionary' plugin (gif)](https://raw.githubusercontent.com/Naereen/SublimeText3_SwitchDictionary/master/demo_SublimeText3_SwitchDictionary_plugin.gif)
 
 ----
 
