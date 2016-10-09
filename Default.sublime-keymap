@@ -20,4 +20,8 @@
         "keys": ["ctrl+alt+s"],
         "command": "switch_spellcheck"
     },
+    {
+        "keys": ["ctrl+alt+a"],
+        "command": "auto_switch_spellcheck"
+    },
 ]

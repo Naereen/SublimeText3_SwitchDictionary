@@ -5,15 +5,23 @@
 [
     { "caption": "-" },
     {
-        "command": "enable_english_spellcheck",
-        "caption": "Switch Dictionary – English"
+        "caption": "Switch Dictionary – Disable (None)",
+        "command": "disable_spellcheck"
     },
     {
-        "command": "enable_french_spellcheck",
-        "caption": "Switch Dictionary – French"
+        "caption": "Switch Dictionary – English",
+        "command": "enable_english_spellcheck"
     },
     {
-        "command": "switch_spellcheck",
-        "caption": "Switch Dictionary – None ↔ French ↔ English"
+        "caption": "Switch Dictionary – French",
+        "command": "enable_french_spellcheck"
+    },
+    {
+        "caption": "Switch Dictionary – None ↔ French ↔ English",
+        "command": "switch_spellcheck"
+    },
+    {
+        "caption": "Auto Switch Dictionary (guess)",
+        "command": "auto_switch_spellcheck",
     },
 ]

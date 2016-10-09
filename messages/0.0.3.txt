@@ -1,0 +1,7 @@
+# SublimeText3 SwitchDictionary - ALPHA STAGE
+## WARNING
+This plug-in is still in active development!
+
+## News?
+- 'disable_spellcheck' is in the palette now
+- add the 'auto_switch_spellcheck' command

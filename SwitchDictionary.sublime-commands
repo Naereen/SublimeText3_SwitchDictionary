@@ -4,6 +4,10 @@
 // and http://docs.sublimetext.info/en/latest/extensibility/commands.html for the doc on ST3 commands.
 [
     {
+        "caption": "Switch Dictionary: disable (None)",
+        "command": "disable_spellcheck",
+    },
+    {
         "caption": "Switch Dictionary: to English",
         "command": "enable_english_spellcheck",
     },
@@ -14,5 +18,9 @@
     {
         "caption": "Switch Dictionary: None ↔ French ↔ English",
         "command": "switch_spellcheck",
+    },
+    {
+        "caption": "Auto Switch Dictionary (guess)",
+        "command": "auto_switch_spellcheck",
     },
 ]
