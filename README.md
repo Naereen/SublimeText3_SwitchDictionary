@@ -30,6 +30,7 @@ It is a tiny [Sublime Text 3](https://www.sublimetext.com/3) plug-in (not tested
   - Right now, the detected language is only used to know if it is French / or not French (English or other language). TODO I need to generalize this
   - It sets to *French* if the file is in French (or as a high probability of being written in French), and sets to *English* otherwise
   - [It is binded](Default.sublime-keymap) to <kbd>ctrl+alt+a</kbd> (*a* for *auto*)
+  - Warning: it requires the current file (edited file) to be saved on the disk, as it uses the content of the file to [guess the language](https://github.com/Mimino666/langdetect#basic-usage)
 
 ### `disable_spellcheck`
   - It simply disables the spell-check
