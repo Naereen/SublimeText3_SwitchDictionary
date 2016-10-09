@@ -109,8 +109,8 @@ class DisableSpellcheckCommand(sublime_plugin.TextCommand):
         print("Done running the command 'disable_spellcheck' ...")  # DEBUG
 
 
-# path_to_the_dict_en = "Language - English/en_US.dic"
-path_to_the_dict_en = "Dictionaries/English (American).dic"
+# path_to_the_dict_en = os.path.join("Language - English", "en_US.dic")
+path_to_the_dict_en = os.path.join("Dictionaries", "English (American).dic")
 
 
 def set_english(self):
@@ -138,7 +138,7 @@ class EnableEnglishSpellcheckCommand(sublime_plugin.TextCommand):
         # except:
         #     self.view.run_command("set_setting", {
         #         "setting": "dictionary",
-        #         "value": os.path.join("Packages", "Dictionaries/en_US.dic")
+        #         "value": os.path.join("Packages", "Dictionaries", "en_US.dic")
         #     })
         # TODO: implement here a smart detection : if "Language - English/en_US.dic" is not here, load "Dictionaries/en_US.dic" instead
 
@@ -153,8 +153,8 @@ class EnableEnglishSpellcheckCommand(sublime_plugin.TextCommand):
         print("Done running the command 'enable_english_spellcheck' ...")  # DEBUG
 
 
-# path_to_the_dict_fr = "Language - French - Français/fr_FR.dic"
-path_to_the_dict_fr = "Dictionaries/French.dic"
+# path_to_the_dict_fr = os.path.join("Language - French - Français", "fr_FR.dic")
+path_to_the_dict_fr = os.path.join("Dictionaries", "French.dic")
 
 
 def set_french(self):
@@ -182,7 +182,7 @@ class EnableFrenchSpellcheckCommand(sublime_plugin.TextCommand):
         # except:
         #     self.view.run_command("set_setting", {
         #         "setting": "dictionary",
-        #         "value": os.path.join("Packages", "Dictionaries/French.dic")
+        #         "value": os.path.join("Packages", "Dictionaries", "French.dic")
         #     })
         # TODO: implement here a smart detection : if "Language - French - Français/fr_FR.dic" is not here, load "Dictionaries/French.dic" instead
 
