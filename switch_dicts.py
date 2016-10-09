@@ -109,8 +109,8 @@ class DisableSpellcheckCommand(sublime_plugin.TextCommand):
         print("Done running the command 'disable_spellcheck' ...")  # DEBUG
 
 
-path_to_the_dict_en = "Language - English/en_US.dic"
-# path_to_the_dict_en = "Dictionaries/en_US.dic"
+# path_to_the_dict_en = "Language - English/en_US.dic"
+path_to_the_dict_en = "Dictionaries/English (American).dic"
 
 
 def set_english(self):
@@ -153,8 +153,8 @@ class EnableEnglishSpellcheckCommand(sublime_plugin.TextCommand):
         print("Done running the command 'enable_english_spellcheck' ...")  # DEBUG
 
 
-path_to_the_dict_fr = "Language - French - Français/fr_FR.dic"
-# path_to_the_dict_fr = "Dictionaries/French.dic"
+# path_to_the_dict_fr = "Language - French - Français/fr_FR.dic"
+path_to_the_dict_fr = "Dictionaries/French.dic"
 
 
 def set_french(self):
