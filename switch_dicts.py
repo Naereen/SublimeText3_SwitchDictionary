@@ -36,7 +36,7 @@ TODO 'set_french_email'
 
 About:
 
-- *Date:*    2016-10-09
+- *Date:*    2016-10-10
 - *Version:* 0.0.3
 - *Web:*     https://github.com/Naereen/SublimeText3_SwitchDictionary/
 - *Author:*  Lilian Besson (C) 2016
@@ -44,16 +44,18 @@ About:
 """
 
 # 1. Import requirements
-from __future__ import print_function, division  # Python 2 compatibility if needed
-# from __future__ import absolute_import  # XXX useful ?
+from __future__ import print_function, division  # Python 2 compatibility, if needed
 
 import sublime
 import sublime_plugin
 
 import sys
 import os.path
+import codecs  # Should not be used
 
+# Find out the exact path of the current file
 PLUGIN_DIR = os.path.dirname(os.path.realpath(__file__))
+# To add it to the path, so the package 'langdetect' is available
 sys.path.insert(0, PLUGIN_DIR)
 
 
@@ -100,7 +102,7 @@ class DisableSpellcheckCommand(sublime_plugin.TextCommand):
         print("\nStarting to run the command 'disable_spellcheck' ...")  # DEBUG
         sublime.status_message("Disabling spelling...")
 
-        # 1. Display a message in the status bar
+        # 1. Display an empty message in the status bar
         self.view.set_status("Spelling", "")
 
         # 2. Disable spell check
@@ -240,12 +242,20 @@ class AutoSwitchSpellcheckCommand(sublime_plugin.TextCommand):
         # 2. run detect(content), gets language code
         # 3. XXX currently, if it is 'fr', sets to French, otherwise sets to English
         detection_success = True
+        content_of_current_file = ''
         try:
-            with open(self.view.file_name(), 'r') as current_file:
-                print("I am read the content of the current file, '%s' ..." % current_file.name)
-                content_of_current_file = ''.join(current_file.readlines())
+            # FIXME read the file as UTF-8 to give a unicode string
+            try:
+                with open(self.view.file_name(), 'r') as current_file:
+                    print("I am reading the content of the current file, '%s', with open() ..." % current_file.name)
+                    content_of_current_file = ''.join(current_file.readlines())
                 detected_language = detect(content_of_current_file)
-                print("I detected that the current file is apparently written in '%s' ..." % detected_language)
+            except:
+                with codecs.open(self.view.file_name(), 'r') as current_file:
+                    print("I am reading the content of the current file, '%s', with codecs.open() ..." % current_file.name)
+                    content_of_current_file = ''.join(current_file.readlines())
+                detected_language = detect(content_of_current_file)
+            print("I detected that the current file is apparently written in '%s' ..." % detected_language)
         except:
             detected_language = 'en'
             detection_success = False
@@ -253,7 +263,7 @@ class AutoSwitchSpellcheckCommand(sublime_plugin.TextCommand):
 
         if detection_success and detected_language == 'fr':
             sublime.status_message("Switching spelling to French (guessed)...")
-            # self.view.run_command("enable_french_spellcheck")
+            # self.view.run_command("enable_french_spellcheck")  # XXX not using run_command anymore
             self.view.set_status("Spelling", "French")
             set_french(self)
         elif detection_success and detected_language != 'en':
@@ -261,17 +271,17 @@ class AutoSwitchSpellcheckCommand(sublime_plugin.TextCommand):
             print("[ERROR] I detected that the current file is in '%s', but I don't know how to set spell check for this language." % detected_language)
             print("==> Do it manually !")
             sublime.status_message("Switching spelling to English (failure, non supported language)...")
-            # self.view.run_command("enable_english_spellcheck")
+            # self.view.run_command("enable_english_spellcheck")  # XXX not using run_command anymore
             set_english(self)
             self.view.set_status("Spelling", "English")
         elif detection_success and detected_language == 'en':
             sublime.status_message("Switching spelling to English (guessed)...")
-            # self.view.run_command("enable_english_spellcheck")
+            # self.view.run_command("enable_english_spellcheck")  # XXX not using run_command anymore
             set_english(self)
             self.view.set_status("Spelling", "English")
         else:
             sublime.status_message("Switching spelling to English (default)...")
-            # self.view.run_command("enable_english_spellcheck")
+            # self.view.run_command("enable_english_spellcheck")  # XXX not using run_command anymore
             set_english(self)
             self.view.set_status("Spelling", "English")
 
