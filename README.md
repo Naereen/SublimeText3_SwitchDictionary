@@ -78,6 +78,11 @@ If you have [Package Control](https://packagecontrol.io/) installed in Sublime T
 > - FIXME *NOT YET !* I am waiting for [this pull request](https://github.com/wbond/package_control_channel/pull/5867) to be included.
 > - The package will soon be available [on packagecontrol.io](https://packagecontrol.io/SwitchDictionary)
 
+[![Package Control total downloads](https://img.shields.io/packagecontrol/dt/SwitchDictionary.svg)](https://packagecontrol.io/packages/SwitchDictionary)
+[![Package Control month downloads](https://img.shields.io/packagecontrol/dm/SwitchDictionary.svg)](https://packagecontrol.io/packages/SwitchDictionary)
+[![Package Control week downloads](https://img.shields.io/packagecontrol/dw/SwitchDictionary.svg)](https://packagecontrol.io/packages/SwitchDictionary)
+[![Package Control day downloads](https://img.shields.io/packagecontrol/dd/SwitchDictionary.svg)](https://packagecontrol.io/packages/SwitchDictionary)
+
 ### :floppy_disk: Manually, with [git](https://git-scm.com/)
 You can also install this package manually by entering the Packages directory of Sublime Text 3 (through the menu: "Preferences" > "Browse packages"), and issuing this command on a terminal:
 
@@ -105,9 +110,16 @@ You can check it was well installed by hitting <kbd>ctrl+k, ctrl+s</kbd> (it sho
 
 ----
 
-### :scroll: License
-This plug-in is published under the terms of the [MIT license](http://lbesson.mit-license.org/) (file [LICENSE.txt](LICENSE.txt)).
-© [Lilian Besson](https://github.com/Naereen), 2016.
+## :scroll: License ? [![GitHub license](https://img.shields.io/github/license/Naereen/SublimeText3_SwitchDictionary.svg)](https://github.com/Naereen/SublimeText3_SwitchDictionary/blob/master/LICENSE)
+This plug-in is published under the terms of the [MIT license](http://lbesson.mit-license.org/) (file [LICENSE.txt](LICENSE.txt)),
+© [Lilian Besson](https://GitHub.com/Naereen), 2016.
 
-[![Ask Me Anything](https://img.shields.io/badge/ask%20me-anything-1abc9c.svg)](https://github.com/Naereen/ama)
-[![Analytics](https://ga-beacon.appspot.com/UA-38514290-17/github.com/Naereen/SublimeText3_SwitchDictionary/README.md?pixel)](https://github.com/Naereen/SublimeText3_SwitchDictionary/)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/SublimeText3_SwitchDictionary/graphs/commit-activity)
+[![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://GitHub.com/Naereen/ama)
+[![Analytics](https://ga-beacon.appspot.com/UA-38514290-17/github.com/Naereen/SublimeText3_SwitchDictionary/README.md?pixel)](https://GitHub.com/Naereen/SublimeText3_SwitchDictionary/)
+[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
+
+[![ForTheBadge uses-badges](http://ForTheBadge.com/images/badges/uses-badges.svg)](http://ForTheBadge.com)
+[![ForTheBadge uses-git](http://ForTheBadge.com/images/badges/uses-git.svg)](https://GitHub.com/)
+
+[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/Naereen/)
