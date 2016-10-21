@@ -1,11 +1,14 @@
-# [SublimeText3 SwitchDictionary](https://github.com/Naereen/SublimeText3_SwitchDictionary/) - BETA STAGE
+# [SublimeText3 SwitchDictionary](https://github.com/Naereen/SublimeText3_SwitchDictionary/) - EARLY STAGE
 ## WARNING
-[This plug-in](https://github.com/Naereen/SublimeText3_SwitchDictionary/) [is still in active development](https://github.com/Naereen/SublimeText3_SwitchDictionary/graphs/commit-activity) and in very early stage!
+[This plug-in](https://github.com/Naereen/SublimeText3_SwitchDictionary/) [is still in active development](https://github.com/Naereen/SublimeText3_SwitchDictionary/graphs/commit-activity) and in early stage!
 
 ## About
 It is a tiny [Sublime Text 3](https://www.sublimetext.com/3) plug-in (not tested on [ST 2](https://www.sublimetext.com/)), that add commands and shortcuts to switch between: no spell-check, spell-check for *French*, and spell-check for *English*.
 
-*Note:* I hope it will soon be better, allowing you to define your own list of dictionaries.
+This plugin also implements a small automatic language checker to detect if the document is in French or in English (and [embeds](https://github.com/Naereen/SublimeText3_SwitchDictionary/tree/master/langdetect/) a more sophisticated one), but the dictionary is loaded only with a keyboard shortcut, it is *not* turned on automatically.
+
+*Note:* It is restricted to only French vs English for now.
+I hope it will soon be better, allowing you to define your own list of dictionaries.
 
 ## Demo (gif screencast)
 ![demo of Sublime Text 3 'SwitchDictionary' plugin (gif)](https://raw.githubusercontent.com/Naereen/SublimeText3_SwitchDictionary/master/demo_SublimeText3_SwitchDictionary_plugin.gif)
@@ -15,26 +18,26 @@ It is a tiny [Sublime Text 3](https://www.sublimetext.com/3) plug-in (not tested
 ## Commands
 ### `enable_english_spellcheck`
   - It enables spell-check, and sets the dictionary to *English*
-  - [It is binded](Default.sublime-keymap) to the key chain <kbd>ctrl+k, ctrl+e</kbd>
+  - [It is associated](Default.sublime-keymap) to the key chain <kbd>ctrl+k, ctrl+e</kbd>
 
 ### `enable_french_spellcheck`
   - It enables spell-check, and sets the dictionary to *French*
-  - [It is binded](Default.sublime-keymap) to the key chain <kbd>ctrl+k, ctrl+f</kbd>
+  - [It is associated](Default.sublime-keymap) to the key chain <kbd>ctrl+k, ctrl+f</kbd>
 
 ### `switch_spellcheck`
   - It cycles between *English*, *French*, and *None*
-  - [It is binded](Default.sublime-keymap) to the key chain <kbd>ctrl+k, ctrl+s</kbd> and also to <kbd>ctrl+alt+s</kbd> (*s* for *switch*)
+  - [It is associated](Default.sublime-keymap) to the key chain <kbd>ctrl+k, ctrl+s</kbd> and also to <kbd>ctrl+alt+s</kbd> (*s* for *switch*)
 
 ### `auto_switch_spellcheck`
-  - It uses [langdetect.detect](https://github.com/Mimino666/langdetect) to (try to) automatically detect the language of the current file
+  - It uses [`langdetect.detect`](https://github.com/Mimino666/langdetect) to (try to) automatically detect the language of the current file. I also [manually added](https://github.com/Naereen/SublimeText3_SwitchDictionary/commit/cdaeccee0e15f37d2303db4c55aee66ceb6187b2) a small check (with French accents), as `langdetect` is failing on some very small files
   - Right now, the detected language is only used to know if it is French / or not French (English or other language). TODO I need to generalize this
   - It sets to *French* if the file is in French (or as a high probability of being written in French), and sets to *English* otherwise
-  - [It is binded](Default.sublime-keymap) to <kbd>ctrl+alt+a</kbd> (*a* for *auto*)
+  - [It is associated](Default.sublime-keymap) to <kbd>ctrl+alt+a</kbd> (*a* for *auto*)
   - Warning: it requires the current file (edited file) to be saved on the disk, as it uses the content of the file to [guess the language](https://github.com/Mimino666/langdetect#basic-usage)
 
 ### `disable_spellcheck`
   - It simply disables the spell-check
-  - It is NOT binded to any key (*tip:* use the default command, binded to <kbd>F6</kbd>)
+  - It is NOT associated to any key (*tip:* use the default command, associated to <kbd>F6</kbd> by default)
 
 ----
 

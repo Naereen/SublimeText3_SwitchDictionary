@@ -36,7 +36,7 @@ TODO 'set_french_email'
 
 About:
 
-- *Date:*    2016-10-10
+- *Date:*    2016-10-21
 - *Version:* 0.0.3
 - *Web:*     https://github.com/Naereen/SublimeText3_SwitchDictionary/
 - *Author:*  Lilian Besson (C) 2016
@@ -68,12 +68,7 @@ except ImportError:
     def detect(*args):
         return "en"
     print("[ERROR] Failed to import langdetect : it will always detect English, by default.")
-    # print("Are you sure you have installed the SwitchDictionary plugin from packagecontrol.io or from GitHub ?")  # DEBUG
-
-try:
-    from pprint import pprint
-except ImportError:
-    pprint = print
+    print("Are you sure you have installed the SwitchDictionary plugin from packagecontrol.io or from GitHub ?")  # DEBUG
 
 
 # XXX List of French accents, used for the manual detection of French language
@@ -85,7 +80,7 @@ MIN_NUMBER_OF_FRENCH_ACCENT = 3
 
 # 2. Utility functions
 def spell_check(self, b):
-    """ Set the 'spell_check' setting to the boolean b (True or False).
+    """ Set the 'spell_check' setting to the Boolean b (True or False).
     """
     print("Setting 'spell_check' to '%s' ..." % b)  # DEBUG
     self.view.run_command("set_setting", {
@@ -95,7 +90,7 @@ def spell_check(self, b):
 
 
 def set_setting_dictionary(self, path_to_dict):
-    """ Set the 'dictionary' setting to the boolean path 'path_to_dict'.
+    """ Set the 'dictionary' setting to the Boolean path 'path_to_dict'.
     """
     print("Setting 'dictionary' setting to '{}' ...".format(
         os.path.join("Packages", path_to_dict)
@@ -269,21 +264,20 @@ class AutoSwitchSpellcheckCommand(sublime_plugin.TextCommand):
                 detected_language = detect(content_of_current_file)
             print("I detected that the current file is apparently written in '%s' ..." % detected_language)
 
-            # FIXME add manual checks to see if there is some French accents in the text
+            # DONE add manual checks to see if there is some French accents in the text
             if any(c in content_of_current_file for c in french_accents):
                 dict_of_present_french_accents = {c: content_of_current_file.count(c) for c in french_accents if c in content_of_current_file}
                 nb = sum(dict_of_present_french_accents.values())
                 print("But I also manually detected that {} French accent{} present in this text ...".format(nb, "s are" if nb > 1 else " is"))
-                print("These accents were found:")
-                pprint(dict_of_present_french_accents)
+                print("These accents were found:", dict_of_present_french_accents)
                 print("\nSo that's a total of {} French accents ...".format(nb))
                 if nb > MIN_NUMBER_OF_FRENCH_ACCENT:
                     detected_language = 'fr'
         except Exception as e:                 # DEBUG
-            print("[DEBUG] Exception e =", e)  # DEBUG
-            print(sys.exc_info())              # DEBUG
-            import traceback                   # DEBUG
-            print(traceback.format_exc())      # DEBUG
+            # print("[DEBUG] Exception e =", e)  # DEBUG
+            # print(sys.exc_info())              # DEBUG
+            # import traceback                   # DEBUG
+            # print(traceback.format_exc())      # DEBUG
             detected_language = 'en'
             detection_success = False
             print("[ERROR] I failed to open, read or detect the language, using 'en', default language is English ...")
