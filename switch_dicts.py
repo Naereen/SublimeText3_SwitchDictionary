@@ -70,6 +70,18 @@ except ImportError:
     print("[ERROR] Failed to import langdetect : it will always detect English, by default.")
     # print("Are you sure you have installed the SwitchDictionary plugin from packagecontrol.io or from GitHub ?")  # DEBUG
 
+try:
+    from pprint import pprint
+except ImportError:
+    pprint = print
+
+
+# XXX List of French accents, used for the manual detection of French language
+# Ref: https://fr.wikipedia.org/wiki/Diacritiques_utilis%C3%A9s_en_fran%C3%A7ais
+french_accents = "àâäéèêëïîôöùûüÿçæœÀÂÄÉÈÊËÎÏÔÖÙÛÜŸÇÆŒ"
+# Minimum number of these French accents before the file is considered to be written in French
+MIN_NUMBER_OF_FRENCH_ACCENT = 3
+
 
 # 2. Utility functions
 def spell_check(self, b):
@@ -244,7 +256,7 @@ class AutoSwitchSpellcheckCommand(sublime_plugin.TextCommand):
         detection_success = True
         content_of_current_file = ''
         try:
-            # FIXME read the file as UTF-8 to give a unicode string
+            # FIXED read the file as UTF-8 to give a unicode string
             try:
                 with open(self.view.file_name(), 'r') as current_file:
                     print("I am reading the content of the current file, '%s', with open() ..." % current_file.name)
@@ -256,7 +268,22 @@ class AutoSwitchSpellcheckCommand(sublime_plugin.TextCommand):
                     content_of_current_file = ''.join(current_file.readlines())
                 detected_language = detect(content_of_current_file)
             print("I detected that the current file is apparently written in '%s' ..." % detected_language)
-        except:
+
+            # FIXME add manual checks to see if there is some French accents in the text
+            if any(c in content_of_current_file for c in french_accents):
+                dict_of_present_french_accents = {c: content_of_current_file.count(c) for c in french_accents if c in content_of_current_file}
+                nb = sum(dict_of_present_french_accents.values())
+                print("But I also manually detected that {} French accent{} present in this text ...".format(nb, "s are" if nb > 1 else " is"))
+                print("These accents were found:")
+                pprint(dict_of_present_french_accents)
+                print("\nSo that's a total of {} French accents ...".format(nb))
+                if nb > MIN_NUMBER_OF_FRENCH_ACCENT:
+                    detected_language = 'fr'
+        except Exception as e:                 # DEBUG
+            print("[DEBUG] Exception e =", e)  # DEBUG
+            print(sys.exc_info())              # DEBUG
+            import traceback                   # DEBUG
+            print(traceback.format_exc())      # DEBUG
             detected_language = 'en'
             detection_success = False
             print("[ERROR] I failed to open, read or detect the language, using 'en', default language is English ...")
