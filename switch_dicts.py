@@ -36,7 +36,7 @@ TODO 'set_french_email'
 
 About:
 
-- *Date:*    2016-10-21
+- *Date:*    2016-11-07
 - *Version:* 0.0.3
 - *Web:*     https://github.com/Naereen/SublimeText3_SwitchDictionary/
 - *Author:*  Lilian Besson (C) 2016
@@ -44,7 +44,7 @@ About:
 """
 
 # 1. Import requirements
-from __future__ import print_function, division  # Python 2 compatibility, if needed
+from __future__ import print_function  # Python 2 compatibility, if needed
 
 import sublime
 import sublime_plugin
@@ -53,20 +53,24 @@ import sys
 import os.path
 import codecs  # Should not be used
 
-# Find out the exact path of the current file
-PLUGIN_DIR = os.path.dirname(os.path.realpath(__file__))
-# To add it to the path, so the package 'langdetect' is available
-sys.path.insert(0, PLUGIN_DIR)
-
 
 # Make sure nothing gets broken even if the package langdetect is not available
 # Note: It comes from https://github.com/Mimino666/langdetect
 try:
-    from langdetect import detect
-    # print("Success when importing 'detect' from 'langdetect' (coming from https://github.com/Mimino666/langdetect) ...")   # DEBUG
+    from .langdetect import detect  # relative local import
+    # print("Success when importing 'detect' from local 'langdetect' (coming from https://github.com/Mimino666/langdetect) ...")   # DEBUG
 except ImportError:
-    def detect(*args):
-        return "en"
+    try:
+        # Find out the exact path of the current file
+        PLUGIN_DIR = os.path.dirname(os.path.realpath(__file__))
+        # To add it to the path, so the package 'langdetect' is available
+        sys.path.insert(0, PLUGIN_DIR)
+        from langdetect import detect
+        # Should be fine now?
+        # print("Success when importing 'detect' from 'langdetect' (coming from https://github.com/Mimino666/langdetect) ...")   # DEBUG
+    except ImportError:
+        def detect(*args):
+            return "en"
     print("[ERROR] Failed to import langdetect : it will always detect English, by default.")
     print("Are you sure you have installed the SwitchDictionary plugin from packagecontrol.io or from GitHub ?")  # DEBUG
 
