@@ -1,4 +1,4 @@
-# SublimeText3 SwitchDictionary - ALPHA STAGE
+# SublimeText3 SwitchDictionary - BETA STAGE
 ## WARNING
 This plug-in is still in active development!
 
