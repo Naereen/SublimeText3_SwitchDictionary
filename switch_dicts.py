@@ -71,8 +71,8 @@ except ImportError:
     except ImportError:
         def detect(*args):
             return "en"
-    print("[ERROR] Failed to import langdetect : it will always detect English, by default.")
-    print("Are you sure you have installed the SwitchDictionary plugin from packagecontrol.io or from GitHub ?")  # DEBUG
+        print("[ERROR] Failed to import langdetect : it will always detect English, by default.")
+        print("Are you sure you have installed the SwitchDictionary plugin from packagecontrol.io or from GitHub ?")  # DEBUG
 
 
 # XXX List of French accents, used for the manual detection of French language
