@@ -78,8 +78,7 @@ If you have [Package Control](https://packagecontrol.io/) installed in Sublime T
 1. Start typing `install` to select `Package Control: Install Package`,
 2. Then search for `SwitchDictionary` and select it. That's it!
 
-> - FIXME *NOT YET !* I am waiting for [this pull request](https://github.com/wbond/package_control_channel/pull/5867) to be included.
-> - The package will soon be available [on packagecontrol.io](https://packagecontrol.io/SwitchDictionary)
+The package is now available [on packagecontrol.io](https://packagecontrol.io/packages/SwitchDictionary) !
 
 [![Package Control total downloads](https://img.shields.io/packagecontrol/dt/SwitchDictionary.svg)](https://packagecontrol.io/packages/SwitchDictionary)
 [![Package Control month downloads](https://img.shields.io/packagecontrol/dm/SwitchDictionary.svg)](https://packagecontrol.io/packages/SwitchDictionary)
@@ -100,16 +99,16 @@ You can check it was well installed by hitting <kbd>ctrl+k, ctrl+s</kbd> (it sho
 ----
 
 ## :boom: [TODO !](https://github.com/Naereen/SublimeText3_SwitchDictionary/projects/1)
-- [X] Test it on another laptop : DONE on another Linux laptop
-- [ ] Test it on Mac OS X and/or Windows
-- [X] Implement a smart detection, to know if a file is in French or in English
+- [x] Test it on another laptop : DONE on another Linux laptop
+- [x] Test it on Mac OS X : DONE on a Mac OS laptop, TOOD on Windows
+- [x] Implement a smart detection, to know if a file is in French or in English
 - [ ] Be more general, allow a user to define his own favorite dictionaries
 - [ ] Finish it completely
 - [ ] Include a second screencast showing the "automatic language detection" feature (new in [v0.0.3](https://github.com/Naereen/SublimeText3_SwitchDictionary/releases/tag/v0.0.3))
-- [ ] Publish it on [Package Control](https://packagecontrol.io/) ! XXX I am waiting for [this pull request](https://github.com/wbond/package_control_channel/pull/5867) to be included.
+- [x] Publish it on [Package Control](https://packagecontrol.io/), OK. I was waiting for [this pull request](https://github.com/wbond/package_control_channel/pull/5867) to be merged.
 
 ## :hourglass: [Future Features](https://github.com/Naereen/SublimeText3_SwitchDictionary/projects/1)
-- Be more general: allow users to define manually a list of dictionary (path, and name), and add one command for each dictionary, and make the switch_spellcheck command cycle between them! XXX Use the [ST2 SwitchLanguage plugin](https://packagecontrol.io/packages/SwitchLanguage) ?
+- Be more general: allow users to define manually a list of dictionary (path, and name), and add one command for each dictionary, and make the `switch_spellcheck` command cycle between them!
 
 ----
 
