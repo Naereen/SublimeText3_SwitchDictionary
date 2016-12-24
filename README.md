@@ -1,6 +1,13 @@
 # [SublimeText3 SwitchDictionary](https://github.com/Naereen/SublimeText3_SwitchDictionary/) - EARLY STAGE
 ## WARNING
-[This plug-in](https://github.com/Naereen/SublimeText3_SwitchDictionary/) [is still in active development](https://github.com/Naereen/SublimeText3_SwitchDictionary/graphs/commit-activity) and in early stage!
+[This plug-in](https://github.com/Naereen/SublimeText3_SwitchDictionary/) [is still in active development](https://github.com/Naereen/SublimeText3_SwitchDictionary/graphs/commit-activity) and is in early stage!
+
+[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
+[![made-for-st3](https://img.shields.io/badge/Made%20for-SublimeText3-green.svg)](https://www.sublimetext.com/3dev)
+[![Package Control total downloads](https://img.shields.io/packagecontrol/dt/SwitchDictionary.svg)](https://packagecontrol.io/packages/SwitchDictionary)
+[![Package Control month downloads](https://img.shields.io/packagecontrol/dm/SwitchDictionary.svg)](https://packagecontrol.io/packages/SwitchDictionary)
+[![Package Control week downloads](https://img.shields.io/packagecontrol/dw/SwitchDictionary.svg)](https://packagecontrol.io/packages/SwitchDictionary)
+[![Package Control day downloads](https://img.shields.io/packagecontrol/dd/SwitchDictionary.svg)](https://packagecontrol.io/packages/SwitchDictionary)
 
 ## About
 It is a tiny [Sublime Text 3](https://www.sublimetext.com/3) plug-in (not tested on [ST 2](https://www.sublimetext.com/)), that add commands and shortcuts to switch between: no spell-check, spell-check for *French*, and spell-check for *English*.
@@ -30,7 +37,7 @@ I hope it will soon be better, allowing you to define your own list of dictionar
 
 ### `auto_switch_spellcheck`
   - It uses [`langdetect.detect`](https://github.com/Mimino666/langdetect) to (try to) automatically detect the language of the current file. I also [manually added](https://github.com/Naereen/SublimeText3_SwitchDictionary/commit/cdaeccee0e15f37d2303db4c55aee66ceb6187b2) a small check (with French accents), as `langdetect` is failing on some very small files
-  - Right now, the detected language is only used to know if it is French / or not French (English or other language). TODO I need to generalize this
+  - Right now, the detected language is **only** used to know if it is French / or not French (English or other language). TODO I need to generalize this
   - It sets to *French* if the file is in French (or as a high probability of being written in French), and sets to *English* otherwise
   - [It is associated](Default.sublime-keymap) to <kbd>ctrl+alt+a</kbd> (*a* for *auto*)
   - Warning: it requires the current file (edited file) to be saved on the disk, as it uses the content of the file to [guess the language](https://github.com/Mimino666/langdetect#basic-usage)
@@ -100,7 +107,7 @@ You can check it was well installed by hitting <kbd>ctrl+k, ctrl+s</kbd> (it sho
 
 ## :boom: [TODO !](https://github.com/Naereen/SublimeText3_SwitchDictionary/projects/1)
 - [x] Test it on another laptop : DONE on another Linux laptop
-- [x] Test it on Mac OS X : DONE on a Mac OS laptop, TOOD on Windows
+- [x] Test it on Mac OS X : DONE on a Mac OS laptop, TODO on Windows
 - [x] Implement a smart detection, to know if a file is in French or in English
 - [ ] Be more general, allow a user to define his own favorite dictionaries
 - [ ] Finish it completely
@@ -119,7 +126,6 @@ This plug-in is published under the terms of the [MIT license](http://lbesson.mi
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/SublimeText3_SwitchDictionary/graphs/commit-activity)
 [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://GitHub.com/Naereen/ama)
 [![Analytics](https://ga-beacon.appspot.com/UA-38514290-17/github.com/Naereen/SublimeText3_SwitchDictionary/README.md?pixel)](https://GitHub.com/Naereen/SublimeText3_SwitchDictionary/)
-
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 [![made-for-st3](https://img.shields.io/badge/Made%20for-SublimeText3-green.svg)](https://www.sublimetext.com/3dev)
 
