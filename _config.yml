@@ -1,0 +1,8 @@
+title: SublimeText3 plugin - SwitchDictionary | by Naereen @ GitHub
+description: "/!\\ ALPHA STAGE. Tiny ST3 plug-in to easily switch between: no spell-check, spell-check for French, and spell-check for English"
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-slate
+
+gems:
+  - jekyll-mentions
